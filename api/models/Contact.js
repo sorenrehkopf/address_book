@@ -18,16 +18,20 @@ module.exports = {
   		type:'string'
   	},
   	city:{
-  		type:'string'
+  		type:'string',
+  		notEmpty:true
   	},
   	state:{
-  		type:'string'
+  		type:'string',
+  		notEmpty:true
   	},
   	zip:{
-  		type:'float'
+  		type:'float',
+  		notEmpty:true
   	},
   	phone:{
-  		type:'float'
+  		type:'float',
+  		float:true
   	},
   	person:{
   		model:'Person',

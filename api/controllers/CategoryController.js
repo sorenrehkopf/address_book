@@ -7,7 +7,7 @@
 
 module.exports = {
 	create: function(req,res){
-		Category.findOrCreate({name:req.params.name}).exec(function(category){
+		Category.findOrCreate({name:req.body.name}).exec(function(err,category){
 			res.send(category);
 		});
 	}

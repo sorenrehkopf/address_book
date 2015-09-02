@@ -48,6 +48,7 @@ module.exports = {
 			zip:req.body.zip,
 			phone:req.body.phone
 			}).exec(function(err,contact){
+				console.log(err,contact)
 			person.contact.add(contact);
 			person.save(function(err,savedPerson){
 				res.send(savedPerson.contact)

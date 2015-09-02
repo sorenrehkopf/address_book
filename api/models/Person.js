@@ -10,14 +10,16 @@ module.exports = {
   attributes: {
   	firstName: {
   		type:'string',
-  		required:true
+  		required:true,
+  		notEmpty:true
   	},
   	lastName:{
   		type:'string',
   		required:true
   	},
   	notes:{
-  		type:'text'
+  		type:'text',
+  		required:false
   	},
   	contact:{
   		collection:'Contact',
