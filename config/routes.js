@@ -22,6 +22,14 @@
 
 module.exports.routes = {
 
+  'POST /category':'CategoryController.create',
+  
+  // 'GET /person':'PersonController.index',
+  'GET /person/:id/category':'PersonController.showCategory',
+  'GET /person/:id/contact':'PersonController.showContact',
+  'POST /person/:id/category':'PersonController.addCategory',
+  'POST /person/:id/contact':'PersonController.addContact',
+
   /***************************************************************************
   *                                                                          *
   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
@@ -32,9 +40,9 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  // '/': {
+  //   view: 'homepage'
+  // }
 
   /***************************************************************************
   *                                                                          *
