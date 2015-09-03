@@ -22,13 +22,22 @@
 
 module.exports.routes = {
 
-  'POST /category':'CategoryController.create',
+  'POST /api/category':'CategoryController.create',
   
   // 'GET /person':'PersonController.index',
-  'GET /person/:id/category':'PersonController.showCategory',
-  'GET /person/:id/contact':'PersonController.showContact',
-  'POST /person/:id/category':'PersonController.addCategory',
-  'POST /person/:id/contact':'PersonController.addContact',
+  'GET /api/person/:id/category':'PersonController.showCategory',
+  'GET /api/person/:id/contact':'PersonController.showContact',
+  'POST /api/person/:id/category':'PersonController.addCategory',
+  'POST /api/person/:id/contact':'PersonController.addContact',
+
+  '/': 'PagesController.index',
+
+  "get *":{
+    controller:"PagesController",
+    action:"index",
+    skipAssets: true,
+    skipRegex: /^\/api\/.*$/
+}
 
   /***************************************************************************
   *                                                                          *
