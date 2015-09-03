@@ -1,12 +1,12 @@
-<h1>{{person.firstName}}</h1><a ng-click="addToCategory()" class="pull-right btn btn-info glyphicon glyphicon-plus">Category</a><a ng-click="addContact()" class="pull-right btn btn-success glyphicon glyphicon-plus">Contact</a>
+<h1>{{person.firstName}}</h1>Contact</a>
 <em>{{person.firstName}}  {{person.lastName}}</em>
 <p>{{person.notes}}</p>
 
-<h3>Contacts</h3>
+<h3>Contacts   <a ng-click="addContact()" class="btn btn-success glyphicon glyphicon-plus"></a></h3>
 <ul>
 	<li ng-repeat="contact in person.contact"><a href="contact/{{contact.id}}">{{contact.name}}</a>
 </ul>
-<h3>Categories</h3>
+<h3>Categories<a ng-click="addCategory()" class="btn btn-success glyphicon glyphicon-plus"></a></h3>
 <ul>
 	<li ng-repeat="category in person.category"><a href="category/{{category.id}}">{{category.name}}</a>
 </ul>
